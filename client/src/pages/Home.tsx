@@ -1,14 +1,13 @@
 import "./Home.css";
-import { Link } from "react-router";
-import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 function Home() {
   return (
     <>
-    <Nav />
+      <Nav />
       <h1>Hellow word</h1>
-    <Footer />
+      <Footer />
     </>
   );
 }

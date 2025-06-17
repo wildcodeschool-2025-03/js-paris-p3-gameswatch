@@ -1,13 +1,12 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
+import Game from "./pages/Game";
 import Home from "./pages/Home";
-import Game from "./pages/game";
-import Inscription from "./pages/inscription";
-import Login from "./pages/login";
+import Inscription from "./pages/Inscription";
+import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Search from "./pages/search";
-import Sitting from "./pages/sitting";
-
+import Search from "./pages/Search";
+import Sitting from "./pages/Sitting";
 
 const Routes = createBrowserRouter([
   {

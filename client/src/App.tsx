@@ -1,13 +1,14 @@
 import "./App.css";
 import { useState } from "react";
-import { Link, Outlet } from "react-router";
-import Nav from "./components/Nav";
+import { Outlet } from "react-router";
 import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 function App() {
   const [isBeginner, setIsBeginner] = useState(true);
   return (
     <>
+      <Nav />
       <Outlet context={{ isBeginner, setIsBeginner }} />
       <Footer />
     </>
