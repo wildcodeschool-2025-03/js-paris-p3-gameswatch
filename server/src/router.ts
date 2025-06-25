@@ -13,9 +13,11 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add); */
 
-import videoGameActions from "./modules/videoGames/videoGameActions";
+import videoGameActions from "./modules/videoGame/videoGameActions";
 
-router.get("/api/videoGames", videoGameActions.test);
+router.get("/api/videoGames", videoGameActions.browse);
+router.post("/api/videoGames", videoGameActions.add);
+router.get("/api/videoGames/:id", videoGameActions.read);
 
 /* ************************************************************************* */
 

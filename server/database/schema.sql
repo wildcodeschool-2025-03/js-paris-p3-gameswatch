@@ -46,7 +46,20 @@ CREATE TABLE IF NOT EXISTS `projet_3_gamewatch`.`video_game` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-
+-- rajouter different isert into
+NSERT INTO video_game (name, date, description, img, note, url)
+VALUES 
+("League of Legends", "2009-01-01", "Cool game, very fun", "https://www.pedagojeux.fr/wp-content/uploads/2019/11/1280x720_LoL.jpg", "5", "https://www.riotgames.com/fr"),
+("Minecraft", "2011-11-18", "Sandbox game about creativity and survival", "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png", "5", "https://www.minecraft.net/"),
+("The Legend of Zelda: Breath of the Wild", "2017-03-03", "Open-world adventure game", "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg", "5", "https://www.zelda.com/breath-of-the-wild/"),
+("Elden Ring", "2022-02-25", "Dark fantasy open world action-RPG", "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg", "5", "https://en.bandainamcoent.eu/elden-ring/elden-ring"),
+("God of War Ragnarok", "2022-11-09", "Norse mythology-based action game", "https://upload.wikimedia.org/wikipedia/en/e/ed/God_of_War_Ragnarok_cover.jpg", "5", "https://www.playstation.com/en-us/games/god-of-war-ragnarok/"),
+("Hollow Knight", "2017-02-24", "Challenging action-platformer in a hand-drawn world", "https://upload.wikimedia.org/wikipedia/en/3/32/Hollow_Knight_cover.jpg", "5", "https://www.hollowknight.com/"),
+("Stardew Valley", "2016-02-26", "Farming and life simulation RPG", "https://upload.wikimedia.org/wikipedia/en/f/fd/Stardew_Valley_cover_art.jpg", "5", "https://www.stardewvalley.net/"),
+("The Witcher 3: Wild Hunt", "2015-05-18", "Story-driven open world RPG", "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg", "5", "https://thewitcher.com/en/witcher3"),
+("Apex Legends", "2019-02-04", "Fast-paced free-to-play battle royale shooter", "https://upload.wikimedia.org/wikipedia/en/5/5b/Apex_legends_cover.jpg", "4", "https://www.ea.com/games/apex-legends"),
+("Overwatch 2", "2022-10-04", "Team-based hero shooter", "https://upload.wikimedia.org/wikipedia/en/3/31/Overwatch_2_cover_art.jpg", "4", "https://overwatch.blizzard.com/"),
+("Baldur's Gate 3", "2023-08-03", "Turn-based tactical RPG based on D&D", "https://upload.wikimedia.org/wikipedia/en/b/b5/Baldur%27s_Gate_3_cover_art.jpg", "5", "https://baldursgate3.game/");
 -- -----------------------------------------------------
 -- Table `projet_3_gamewatch`.`like`
 -- -----------------------------------------------------
