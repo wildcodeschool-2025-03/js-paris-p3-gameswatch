@@ -1,14 +1,7 @@
 import "./Home.css";
 
-
-
 function Home() {
-  return (
-    <>
-
-
-    </>
-  );
+  return <></>;
 }
 
 export default Home;
