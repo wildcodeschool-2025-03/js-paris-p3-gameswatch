@@ -3,10 +3,7 @@ import "./Profile.css";
 function Profile() {
   return (
     <>
-
-      <div className='carré'>
-
-      </div>
+      <div className="carré" />
     </>
   );
 }

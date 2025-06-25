@@ -1,0 +1,40 @@
+import databaseClient from "../../../database/client";
+
+import type { Result, Rows } from "../../../database/client";
+
+type VideoGame = {
+  id: number;
+  name: string;
+  date: string;
+  description: string;
+  img: string;
+  note: string;
+  url: string;
+};
+
+/*rajouter mon crud*/
+
+class videoGameRepository {
+  async create(videoGame: Omit<VideoGame, "id">) {
+    const [result] = await databaseClient.query<Result>(
+      "insert into video_game (name, description) values (?, ?)" /*faire la ligne la */,
+      [videoGame.name, videoGame.description],
+    );
+    return result.insertId;
+  }
+
+  async read(id: number) {
+    const [rows] = await databaseClient.query<Rows>(
+      "select * from video_game where id = ?",
+      [id],
+    );
+    return rows[0] as VideoGame;
+  }
+
+  async readAll() {
+    const [rows] = await databaseClient.query<Rows>("select * from video_game");
+    return rows as VideoGame[];
+  }
+}
+
+export default new videoGameRepository();

@@ -1,0 +1,40 @@
+footer {
+  /*margin-top: 23%;*/
+  height: 220px;
+  background-color: black;
+  display: flex;
+  border-color: #3fe2ff;
+  border-width: 10px;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: "Krona One", sans-serif;
+  gap: 140px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand {
+  font-size: 1.2rem;
+  color: #3fe2ff;
+}
+
+.logoFooter {
+  width: 60px;
+  height: auto;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
