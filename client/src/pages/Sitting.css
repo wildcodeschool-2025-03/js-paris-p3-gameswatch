@@ -1,0 +1,64 @@
+.rectangle {
+  background-color: rgba(0, 0, 0, 0.991);
+  width: 70vw;
+  height: 60vh;
+  position: fixed;
+  top: 20vh;
+  left: 10vw;
+  display: flex;
+  border: solid 3px aqua;
+  border-radius: 40px;
+  margin-left: 50px;
+}
+
+.subrectangle {
+  width: 50%;
+  height: 100%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.right button {
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-radius: 40px;
+  text-align: center;
+  padding: 8px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 50%;
+}
+
+.deconnect {
+  background-color: #ff0000;
+  color: white;
+  border: solid 2px aqua;
+}
+
+.modifier {
+  background-color: black;
+  color: white;
+  border: solid 2px aqua;
+}
+
+.trait {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: aqua;
+  height: 80%;
+}
+
+.crossitting {
+  position: absolute;
+  top: 5%;
+  right: 20px;
+  width: 50px;
+}
