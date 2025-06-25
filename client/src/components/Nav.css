@@ -1,0 +1,103 @@
+nav {
+  padding-top: 30px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px #3fe2ff;
+  border-radius: 50%;
+}
+
+.logoNav {
+  gap: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 30%;
+}
+
+.logoSite {
+  height: 100px;
+  width: auto;
+}
+
+.logoSite:hover {
+  transform: scale(1.15);
+}
+
+.TitreNav {
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.TitreNav:hover {
+  transform: scale(1.05);
+}
+
+.WATCH {
+  color: #3fe2ff;
+}
+
+.arrow {
+  width: 15px;
+  height: auto;
+}
+
+.NameBurger {
+  font-size: 25px;
+}
+
+.MenuNav {
+  gap: 40px;
+  display: flex;
+  margin-left: 15%;
+}
+
+.Contact {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.IntroSite {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.dropdown-list {
+  display: flex;
+  margin-top: 8px;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  text-decoration: none;
+}

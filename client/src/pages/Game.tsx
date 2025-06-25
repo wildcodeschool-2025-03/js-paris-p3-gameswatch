@@ -1,13 +1,23 @@
 import "./Game.css";
-import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
 function Game() {
   return (
     <>
-      <Nav />
-      <h1>Hellow word</h1>
-      <Footer />
+      <main className="bodyGame">
+        <Nav />
+        <div className="searchBar-container">
+          <div className="Game-container">
+            <input type="text" className="searchBar" placeholder="recherche" />
+          </div>
+          <div className="gameSearch">
+            <div className="game-Container"> </div>
+            <div className="game-Container"> </div>
+            <div className="game-Container"> </div>
+            <div className="game-Container"> </div>
+          </div>
+        </div>
+      </main>
     </>
   );
 }

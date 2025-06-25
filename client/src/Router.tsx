@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
 import Game from "./pages/Game";
+import GamePc from "./pages/GamePC";
+import GamePlay from "./pages/GamePlay";
+import GameXbox from "./pages/GameXbox";
 import Home from "./pages/Home";
 import Inscription from "./pages/Inscription";
 import Login from "./pages/Login";
@@ -39,6 +42,18 @@ const Routes = createBrowserRouter([
       {
         element: <Sitting />,
         path: "/Sitting",
+      },
+      {
+        element: <GamePc />,
+        path: "/GamePc",
+      },
+      {
+        element: <GameXbox />,
+        path: "/GameXbox",
+      },
+      {
+        element: <GamePlay />,
+        path: "/GamePlay",
       },
     ],
   },
