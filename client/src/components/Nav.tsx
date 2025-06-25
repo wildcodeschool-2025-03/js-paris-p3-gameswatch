@@ -4,8 +4,8 @@ import logo from "../img/logo.svg";
 import search from "../img/search.svg";
 import sitting from "../img/sitting.svg";
 import user from "../img/user.svg";
-import MenuBurger from "./MenuBurger";
 import Sitting from "../pages/Sitting";
+import MenuBurger from "./MenuBurger";
 
 const News = {
   title: "News",
