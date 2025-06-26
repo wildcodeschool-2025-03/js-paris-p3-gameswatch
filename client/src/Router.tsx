@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Sitting from "./pages/Sitting";
-
+import Description from "./pages/Description";
 const Routes = createBrowserRouter([
   {
     element: <App />,
@@ -46,6 +46,10 @@ const Routes = createBrowserRouter([
       {
         element: <GamePc />,
         path: "/GamePc",
+      },
+      {
+        element: <Description />,
+        path: "/Description",
       },
       {
         element: <GameXbox />,

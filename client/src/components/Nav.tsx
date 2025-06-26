@@ -60,7 +60,7 @@ const Nav = () => {
           <img className="logo" src={sitting} alt="logo" />
         </Link>
       </div>
-      <Sitting />
+      {/* <Sitting /> */}
     </nav>
   );
 };
