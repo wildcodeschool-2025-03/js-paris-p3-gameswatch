@@ -4,7 +4,6 @@ import logo from "../img/logo.svg";
 import search from "../img/search.svg";
 import sitting from "../img/sitting.svg";
 import user from "../img/user.svg";
-import Sitting from "../pages/Sitting";
 import MenuBurger from "./MenuBurger";
 
 const News = {
@@ -60,7 +59,6 @@ const Nav = () => {
           <img className="logo" src={sitting} alt="logo" />
         </Link>
       </div>
-      {/* <Sitting /> */}
     </nav>
   );
 };

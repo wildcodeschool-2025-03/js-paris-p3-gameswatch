@@ -1,9 +1,9 @@
 import "./Description.css";
-import Nav from "../components/Nav";
 import { Link } from "react-router-dom";
-import gameImage from "../img/lostark-card.jpg";
-import backgroundImage from "../img/backgroundark.svg"; // image de fond diagonale
+import Nav from "../components/Nav";
 import background from "../img/backgroundHome.svg";
+import backgroundImage from "../img/backgroundark.svg"; // image de fond diagonale
+import gameImage from "../img/lostark-card.jpg";
 
 function Description() {
   return (
