@@ -1,4 +1,6 @@
 nav {
+  position: relative;
+  z-index: 9;
   padding-top: 30px;
   font-family: "Open Sans", sans-serif;
   display: flex;
