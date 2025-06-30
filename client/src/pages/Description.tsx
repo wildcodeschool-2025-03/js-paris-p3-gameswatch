@@ -1,9 +1,10 @@
 import "./Description.css";
-import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import background from "../img/backgroundHome.svg";
 import backgroundImage from "../img/backgroundark.svg"; // image de fond diagonale
+import coeur from "../img/coeur.svg";
 import gameImage from "../img/lostark-card.jpg";
+import pouce from "../img/pouce.svg";
 
 function Description() {
   return (
@@ -33,16 +34,21 @@ function Description() {
 
               <div className="actionButtons">
                 <button type="button" className="iconButton">
-                  👍
+                  <img src={coeur} alt="coeur" className="iconImage" />
+                  <span className="popup">Ajouter à la wishlist</span>
                 </button>
                 <button type="button" className="iconButton">
-                  🔗
+                  <img src={pouce} alt="pouce" className="iconImage" />
+                  <span className="popup">Ajouter aux favoris</span>
                 </button>
-                <Link to="/login">
-                  <button type="button" className="buyButton">
-                    Acheter
-                  </button>
-                </Link>
+                <a
+                  href="https://store.steampowered.com/app/1599340/Lost_Ark/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="buyButton"
+                >
+                  Acheter
+                </a>
               </div>
             </div>
           </div>

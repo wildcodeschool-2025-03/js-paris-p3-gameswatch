@@ -1,4 +1,5 @@
 import "./Game.css";
+import { Link } from "react-router";
 import Nav from "../components/Nav";
 
 function Game() {
@@ -10,12 +11,15 @@ function Game() {
           <div className="Game-container">
             <input type="text" className="searchBar" placeholder="recherche" />
           </div>
-          <div className="gameSearch">
-            <div className="game-Container"> </div>
-            <div className="game-Container"> </div>
-            <div className="game-Container"> </div>
-            <div className="game-Container"> </div>
-          </div>
+
+          <Link to="/Description">
+            <div className="gameSearch">
+              <div className="game-Container"> </div>
+              <div className="game-Container"> </div>
+              <div className="game-Container"> </div>
+              <div className="game-Container"> </div>
+            </div>
+          </Link>
         </div>
       </main>
     </>

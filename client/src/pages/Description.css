@@ -97,6 +97,17 @@
   justify-content: center;
 }
 
+.iconButton1 {
+  font-size: 1.5rem;
+  border: 2px solid #3fe2ff;
+  background: transparent;
+  color: white;
+  border-radius: 50%;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .iconButton {
   font-size: 1.5rem;
   border: 2px solid #3fe2ff;
@@ -108,11 +119,40 @@
   transition: 0.3s;
 }
 
+.iconImage {
+  width: 24px;
+  height: 24px;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  filter: invert(53%) sepia(88%) saturate(5000%) hue-rotate(160deg)
+    brightness(102%) contrast(105%);
+}
+
 .iconButton:hover {
   background-color: #3fe2ff30;
   transform: scale(1.1);
 }
+.popup {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3fe2ff;
+  color: black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
 
+.iconButton:hover .popup {
+  opacity: 1;
+}
 .buyButton {
   font-size: 1rem;
   font-weight: bold;
@@ -123,6 +163,7 @@
   color: white;
   cursor: pointer;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
 .buyButton:hover {
