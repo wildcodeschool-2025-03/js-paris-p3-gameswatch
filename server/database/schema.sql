@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `projet_3_gamewatch`.`video_game` (
 ENGINE = InnoDB;
 
 -- rajouter different isert into
-NSERT INTO video_game (name, date, description, img, note, url)
+INSERT INTO video_game (name, date, description, img, note, url)
 VALUES 
 ("League of Legends", "2009-01-01", "Cool game, very fun", "https://www.pedagojeux.fr/wp-content/uploads/2019/11/1280x720_LoL.jpg", "5", "https://www.riotgames.com/fr"),
 ("Minecraft", "2011-11-18", "Sandbox game about creativity and survival", "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png", "5", "https://www.minecraft.net/"),

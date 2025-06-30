@@ -4,13 +4,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 .game-Container {
   background-color: black;
   border-radius: 20px;
   width: 500px;
-  height: 220px;
+  min-height: 220px;
   border: 2px solid #3fe2ff;
   border-radius: 50px;
 }
