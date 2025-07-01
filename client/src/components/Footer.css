@@ -9,6 +9,7 @@ footer {
   padding: 1rem 2rem;
   font-family: "Krona One", sans-serif;
   gap: 140px;
+  z-index: 2;
 }
 
 .footer-left {

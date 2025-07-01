@@ -4,17 +4,25 @@
   background-position: center;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .imgBody {
-  background-image: url(imageHome.svg);
-  height: 100vh;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 60vw;
-  z-index: 3;
-  top: 0;
+  position: fixed; /* fixe plutôt qu'absolu si tu veux qu’elle colle à l’écran */
   right: 0;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  z-index: 1;
+  background-image: url("../img/imageHome.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .buttonLogin {

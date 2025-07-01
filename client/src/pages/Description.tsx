@@ -62,9 +62,7 @@ function Description() {
               class and advanced class, and customize your skills, weapons, and
               gear to bring your might to bear as you fight against hordes of
               enemies, colossal bosses, and dark forces seeking the power of the
-              Ark in this action-packed...{" "}
-              {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-              <a href="#">Voir plus</a>
+              Ark in this action-packed.
             </p>
           </section>
         </div>

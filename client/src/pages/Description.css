@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .descriptionContainer {
   position: relative;
   font-family: "Inter", sans-serif;
