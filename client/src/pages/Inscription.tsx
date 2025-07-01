@@ -1,9 +1,8 @@
 import "./Inscription.css";
-import Nav from "../components/Nav";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router";
-import { useState, useRef } from "react";
 import { toast } from "react-toastify";
-import Login from "./Login";
+import Nav from "../components/Nav";
 
 export default function Register() {
   const navigate = useNavigate();

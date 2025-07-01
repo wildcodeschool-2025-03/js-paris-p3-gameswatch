@@ -1,6 +1,6 @@
+import argon from "argon2";
 import type { RequestHandler } from "express";
 import userRepository from "./userRepository";
-import argon from "argon2";
 
 const create: RequestHandler = async (req, res, next) => {
   try {

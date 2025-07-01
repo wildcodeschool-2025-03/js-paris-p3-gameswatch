@@ -1,13 +1,11 @@
 import "./Description.css";
-import Nav from "../components/Nav";
-import background from "../img/backgroundHome.svg";
-import backgroundImage from "../img/backgroundark.svg"; // image de fond diagonale
-import coeur from "../img/coeur.svg";
-import gameImage from "../img/lostark-card.jpg";
-import pouce from "../img/pouce.svg";
-import type { VideoGame } from "../types/vite-env";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import Nav from "../components/Nav";
+import background from "../img/backgroundHome.svg";
+import coeur from "../img/coeur.svg";
+import pouce from "../img/pouce.svg";
+import type { VideoGame } from "../types/vite-env";
 
 function Description() {
   const [VideoGame, setVideoGame] = useState<VideoGame>();

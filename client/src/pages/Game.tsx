@@ -1,8 +1,8 @@
 import "./Game.css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import Nav from "../components/Nav";
 import type { VideoGame } from "../types/vite-env";
-import { Link } from "react-router";
 
 function Game() {
   const [VideoGame, setVideoGame] = useState<VideoGame[] | never[]>([]);
