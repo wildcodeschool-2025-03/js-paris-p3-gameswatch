@@ -49,7 +49,7 @@ const Routes = createBrowserRouter([
       },
       {
         element: <Description />,
-        path: "/Description",
+        path: "/Description/:id",
       },
       {
         element: <GameXbox />,

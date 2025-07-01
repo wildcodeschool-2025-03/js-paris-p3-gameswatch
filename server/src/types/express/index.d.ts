@@ -1,5 +1,4 @@
-// to make the file a module and avoid the TypeScript error
-export type {};
+// to make the file a module and avoid the TypeScript erro
 
 declare global {
   namespace Express {
@@ -11,4 +10,19 @@ declare global {
       /* ************************************************************************* */
     }
   }
+}
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  age: string;
+  portable: string;
+  description: string;
+  img: string;
+  game_of_heart: string;
+  time: string;
+  best_friend: string;
+  last_game: string;
 }

@@ -1,11 +1,35 @@
 import "./Description.css";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import Nav from "../components/Nav";
 import background from "../img/backgroundHome.svg";
-import backgroundImage from "../img/backgroundark.svg"; // image de fond diagonale
-import gameImage from "../img/lostark-card.jpg";
+import coeur from "../img/coeur.svg";
+import pouce from "../img/pouce.svg";
+import type { VideoGame } from "../types/vite-env";
 
 function Description() {
+  const [VideoGame, setVideoGame] = useState<VideoGame>();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const loadVideoGame = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3310/api/videoGames/${id}`,
+        );
+        if (response.status !== 200) console.error("offre non trouvée");
+        else {
+          const VideoGame = await response.json();
+          setVideoGame(VideoGame);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadVideoGame();
+  }, [id]);
+
   return (
     <>
       <main className="descriptionContainer">
@@ -13,7 +37,7 @@ function Description() {
 
         <div
           className="diagonalBackground"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+          style={{ backgroundImage: `url(${VideoGame?.img})` }}
         />
 
         <div
@@ -24,25 +48,30 @@ function Description() {
         <div className="foregroundContent">
           <div className="contentWrapper">
             <div className="gameCardLeft">
-              <img src={gameImage} alt="Lost Ark" className="gameImage" />
+              <img src={VideoGame?.img} alt="Lost Ark" className="gameImage" />
             </div>
 
             <div className="gameCardRight">
-              <h2 className="gameTitle">Lost Ark</h2>
+              <h2 className="gameTitle">{VideoGame?.name}</h2>
               <div className="platformBadge">Steam</div>
 
               <div className="actionButtons">
                 <button type="button" className="iconButton">
-                  👍
+                  <img src={coeur} alt="coeur" className="iconImage" />
+                  <span className="popup">Ajouter à la wishlist</span>
                 </button>
                 <button type="button" className="iconButton">
-                  🔗
+                  <img src={pouce} alt="pouce" className="iconImage" />
+                  <span className="popup">Ajouter aux favoris</span>
                 </button>
-                <Link to="/login">
-                  <button type="button" className="buyButton">
-                    Acheter
-                  </button>
-                </Link>
+                <a
+                  href={VideoGame?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="buyButton"
+                >
+                  Acheter
+                </a>
               </div>
             </div>
           </div>
