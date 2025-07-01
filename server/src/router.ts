@@ -19,6 +19,10 @@ router.get("/api/videoGames", videoGameActions.browse);
 router.post("/api/videoGames", videoGameActions.add);
 router.get("/api/videoGames/:id", videoGameActions.read);
 
+import userActions from "./modules/videoGame/user/userActions";
+
+router.post("/api/users", userActions.validate, userActions.create);
+
 /* ************************************************************************* */
 
 export default router;

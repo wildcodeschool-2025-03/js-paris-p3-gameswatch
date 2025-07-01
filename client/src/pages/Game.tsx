@@ -2,6 +2,7 @@ import "./Game.css";
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import type { VideoGame } from "../types/vite-env";
+import { Link } from "react-router";
 
 function Game() {
   const [VideoGame, setVideoGame] = useState<VideoGame[] | never[]>([]);
@@ -33,9 +34,16 @@ function Game() {
           </div>
           <div className="gameSearch">
             {VideoGame.map((game) => (
-              <div key={game.id} className="game-Container">
-                <h1>{game.name}</h1>
-              </div>
+              <Link
+                className="gameCub"
+                key={game.id}
+                to={`/Description/${game.id}`}
+              >
+                <div className="game-Container">
+                  <h1 className="nameGame">{game.name}</h1>
+                  <img src={game.img} className="imgGame" alt="" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
