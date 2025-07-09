@@ -5,6 +5,12 @@ nav {
   font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ul {
@@ -27,7 +33,10 @@ ul {
   gap: 30px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 30%;
+  flex-shrink: 1;
+  max-width: 25%;
+  margin-left: 0;
+  min-width: 0;
 }
 
 .logoSite {
@@ -64,7 +73,12 @@ ul {
 .MenuNav {
   gap: 40px;
   display: flex;
-  margin-left: 15%;
+  flex-shrink: 1;
+  min-width: 0;
+  justify-content: center;
+  margin-left: 0;
+  max-width: 40%;
+  flex-wrap: wrap;
 }
 
 .Contact {

@@ -7,6 +7,8 @@ import Nav from "../components/Nav";
 export default function Register() {
   const navigate = useNavigate();
   const [name, setname] = useState("");
+  const [loading, setLoading] = useState(false); // nouveau : pour bloquer le bouton
+
   const age = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
   const password = useRef<HTMLInputElement>(null);
@@ -14,6 +16,7 @@ export default function Register() {
 
   const register = async () => {
     try {
+      setLoading(true); // on bloque le bouton
       const fetchOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,8 +32,9 @@ export default function Register() {
         "http://localhost:3310/api/users",
         fetchOptions,
       );
+
       if (response.ok) {
-        toast.success("votre inscription a bien été prise en compte");
+        toast.success("Votre inscription a bien été prise en compte");
         navigate("/Login");
       } else {
         const errorMessage = await response.json();
@@ -38,7 +42,9 @@ export default function Register() {
       }
     } catch (error) {
       console.error(error);
-      toast.error("une erreur est survenue");
+      toast.error("Une erreur est survenue");
+    } finally {
+      setLoading(false); // on réactive le bouton
     }
   };
 
@@ -49,33 +55,42 @@ export default function Register() {
         <div className="pageI">
           <div className="inscriptionContainer">
             <h2 className="titreInscription">Inscription :</h2>
+
             <article className="articleI">
               <h3 className="titreI">name</h3>
               <input
                 onChange={(event) => setname(event.target.value)}
                 className="inputInscription"
-                type="name"
+                type="text"
                 placeholder="name"
               />
             </article>
+
             <article className="articleI">
               <h3 className="titreI">age</h3>
               <input
                 ref={age}
                 className="inputInscription"
-                type="age"
+                type="number"
                 placeholder="age"
+                min="10"
+                max="99"
+                required
               />
             </article>
+
             <article className="articleI">
               <h3 className="titreI">portable</h3>
               <input
                 ref={portable}
                 className="inputInscription"
-                type="portable"
+                type="tel"
                 placeholder="portable"
+                pattern="[0-9]{10}"
+                required
               />
             </article>
+
             <article className="articleI">
               <h3 className="titreI">email</h3>
               <input
@@ -85,6 +100,7 @@ export default function Register() {
                 placeholder="email"
               />
             </article>
+
             <article className="articleI">
               <h3 className="titreI">password</h3>
               <input
@@ -94,19 +110,27 @@ export default function Register() {
                 placeholder="password"
               />
             </article>
+
             <article className="articleI">
               <h3 className="titreI">confirm password</h3>
               <input
-                className="inputInscription"
+                className="inputInscription1"
                 type="password"
                 placeholder="password"
               />
             </article>
           </div>
+
           <div>
-            <button onClick={register} className="comfirmBtn" type="button">
-              confirm
+            <button
+              onClick={register}
+              className="comfirmBtn"
+              type="button"
+              disabled={loading}
+            >
+              {loading ? "loading..." : "confirm"}
             </button>
+
             <button
               onClick={() => navigate("/Login")}
               className="comfirmBtn"
