@@ -1,0 +1,100 @@
+.bodyProfile {
+  background-image: url("../img/backgroundGame.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 8rem;
+  height: 70vh;
+  margin-bottom: 115px;
+  margin-top: 3.5rem;
+  border-radius: 7%;
+  border: 2px, solid, #3fe2ff;
+  background-color: rgb(0, 0, 0);
+  gap: 100px;
+  position: relative;
+  z-index: 10;
+  font-family: "Krona One", sans-serif;
+  padding-top: 2.5rem;
+}
+
+.bibliContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 8rem;
+  height: 70vh;
+  margin-bottom: 115px;
+  margin-top: 3.5rem;
+  border-radius: 7%;
+  border: 2px, solid, #3fe2ff;
+  background-color: rgb(0, 0, 0);
+  gap: 100px;
+  position: relative;
+  z-index: 10;
+  font-family: "Krona One", sans-serif;
+  padding-top: 2.5rem;
+}
+
+.profileMain {
+  display: flex;
+  gap: 50px;
+}
+
+.containerTitle {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.containerContain {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.profileImg {
+  width: 180px;
+  height: 200px;
+  border-radius: 20%;
+  border: 2px, solid, #3fe2ff;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  font-family: "Krona One", sans-serif;
+  top: 6rem;
+  left: 4rem;
+}
+
+.line {
+  width: 0px;
+  height: 200px;
+  border-radius: 20%;
+  border: 2px, solid, #3fe2ff;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 6rem;
+  left: 55%;
+}

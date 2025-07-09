@@ -52,7 +52,7 @@ const Nav = () => {
         <Link to="/">
           <img className="logo" src={search} alt="logo" />
         </Link>
-        <Link to="/Login">
+        <Link to="/Profile">
           <img className="logo" src={user} alt="logo" />
         </Link>
         <Link to="/">

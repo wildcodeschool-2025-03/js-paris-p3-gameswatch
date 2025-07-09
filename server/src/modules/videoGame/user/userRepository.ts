@@ -12,4 +12,13 @@ const add = async (user: Partial<User>) => {
   return result.affectedRows;
 };
 
-export default { add };
+const readByEmail = async (email: string) => {
+  const [rows] = await databaseClient.query<Rows>(
+    "SELECT * FROM user WHERE email = ?",
+    [email],
+  );
+
+  return rows[0] as User;
+};
+
+export default { add, readByEmail };

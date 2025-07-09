@@ -46,6 +46,7 @@ export default function Register() {
     <>
       <main className="bodyInscription">
         <Nav />
+        <div className="imgBodyInscription"> </div>
         <div className="pageI">
           <div className="inscriptionContainer">
             <h2 className="titreInscription">Inscription :</h2>
@@ -103,16 +104,17 @@ export default function Register() {
               />
             </article>
           </div>
-          <div>
+          <div className="btnContainer">
             <button onClick={register} className="comfirmBtn" type="button">
-              confirm
+              inscription
             </button>
+
             <button
               onClick={() => navigate("/Login")}
-              className="comfirmBtn"
+              className="comfirmBtn1"
               type="button"
             >
-              login
+              return to login screen
             </button>
           </div>
         </div>

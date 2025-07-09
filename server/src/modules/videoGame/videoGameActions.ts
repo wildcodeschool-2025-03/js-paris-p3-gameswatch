@@ -4,9 +4,14 @@ import videoGameRepository from "../videoGame/videoGameRepository";
 
 const browse: RequestHandler = async (req, res, next) => {
   try {
-    const videoGames = await videoGameRepository.readAll();
-
-    res.json(videoGames);
+    const search = req.query.search as string;
+    if (search) {
+      const videoGames = await videoGameRepository.readAll(search);
+      res.json(videoGames);
+    } else {
+      const videoGames = await videoGameRepository.readAll();
+      res.json(videoGames);
+    }
   } catch (err) {
     next(err);
   }

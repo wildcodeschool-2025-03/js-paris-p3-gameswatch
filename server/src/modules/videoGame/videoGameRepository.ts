@@ -38,7 +38,14 @@ class videoGameRepository {
     return rows[0] as VideoGame;
   }
 
-  async readAll() {
+  async readAll(search = "") {
+    if (search) {
+      const [rows] = await databaseClient.query<Rows>(
+        "select * from video_game WHERE name like ?",
+        [`%${search}%`],
+      );
+      return rows as VideoGame[];
+    }
     const [rows] = await databaseClient.query<Rows>("select * from video_game");
     return rows as VideoGame[];
   }

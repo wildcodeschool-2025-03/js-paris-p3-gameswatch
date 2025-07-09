@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Sitting from "./pages/Sitting";
+
 const Routes = createBrowserRouter([
   {
     element: <App />,

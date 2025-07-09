@@ -11,3 +11,19 @@ export interface VideoGame {
   note: string;
   url: string;
 }
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  age: string;
+  portable: string;
+  description: string;
+  img: string;
+  game_of_heart: string;
+  time: string;
+  best_friend: string;
+  last_game: string;
+  token: string;
+}

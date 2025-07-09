@@ -6,6 +6,25 @@ import type { VideoGame } from "../types/vite-env";
 
 function Game() {
   const [VideoGame, setVideoGame] = useState<VideoGame[] | never[]>([]);
+  const [SearchBar, setSearchBar] = useState("");
+
+  const loadSearch = async (event: { key: string }) => {
+    try {
+      if (event.key === "Enter") {
+        console.log(event.key);
+        const response = await fetch(
+          `http://localhost:3310/api/videoGames?search=${SearchBar}`,
+        );
+        if (response.status !== 200) console.error("game non trouvé");
+        else {
+          const VideoGame = await response.json();
+          setVideoGame(VideoGame);
+        }
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     const loadVideoGame = async () => {
@@ -30,7 +49,13 @@ function Game() {
         <Nav />
         <div className="searchBar-container">
           <div className="Game-container">
-            <input type="text" className="searchBar" placeholder="recherche" />
+            <input
+              onInput={(event) => setSearchBar(event.currentTarget.value)}
+              onKeyDown={loadSearch}
+              type="text"
+              className="searchBar"
+              placeholder="recherche"
+            />
           </div>
           <div className="gameSearch">
             {VideoGame.map((game) => (
