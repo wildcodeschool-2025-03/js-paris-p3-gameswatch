@@ -35,7 +35,7 @@
   margin-top: 3.5rem;
   border-radius: 7%;
   border: 2px, solid, #3fe2ff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(inscription-container-color);
   gap: 35px;
 }
 
@@ -60,7 +60,7 @@
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: rgba(1, 28, 38, 0.3);
+  background-color: var(inscription-input-color);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
   height: 20px;
@@ -80,7 +80,7 @@
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: rgba(2, 28, 32, 0.955);
+  background-color: var(inscription-color);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
   height: 65px;
@@ -98,7 +98,7 @@
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: rgba(63, 226, 255, 0.6);
+  background-color: var(inscription-comfirmBtn-color);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
   height: 65px;

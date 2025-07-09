@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
@@ -19,7 +18,7 @@
   margin-top: 3.5rem;
   border-radius: 7%;
   border: 2px, solid, #3fe2ff;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--black-color);
   gap: 100px;
   position: relative;
   z-index: 10;
@@ -33,13 +32,11 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin-right: 8rem;
   height: 70vh;
-  margin-bottom: 115px;
-  margin-top: 3.5rem;
+  margin: 3.5rem 8rem 115px 0;
   border-radius: 7%;
   border: 2px, solid, #3fe2ff;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--black-color);
   gap: 100px;
   position: relative;
   z-index: 10;
