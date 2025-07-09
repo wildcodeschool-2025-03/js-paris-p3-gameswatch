@@ -1,0 +1,42 @@
+.trail-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.neon-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 200, 255, 1) 0%,
+    rgba(0, 200, 255, 0.5) 40%,
+    transparent 70%
+  );
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.7), 0 0 20px rgba(0, 200, 255, 0.6),
+    0 0 30px rgba(0, 200, 255, 0.4);
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: blur(2px);
+  }
+}
