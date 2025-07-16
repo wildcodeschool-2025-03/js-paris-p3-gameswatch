@@ -2,11 +2,11 @@ import "./Description.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import Nav from "../components/Nav";
+import { useUser } from "../contexts/user.context";
 import background from "../img/backgroundHome.svg";
 import coeur from "../img/coeur.svg";
 import pouce from "../img/pouce.svg";
 import type { VideoGame } from "../types/vite-env";
-import { useUser } from "../contexts/user.context";
 
 function Description() {
   const [VideoGame, setVideoGame] = useState<VideoGame>();

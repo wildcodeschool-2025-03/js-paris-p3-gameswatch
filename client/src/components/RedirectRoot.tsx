@@ -7,7 +7,6 @@ type Props = {
 
 function RedirectRoot({ children }: Props) {
   const { user } = useUser();
-  console.log(user);
 
   return user ? <>{children}</> : <Navigate to="/Login" />;
 }

@@ -77,7 +77,7 @@
 }
 
 .line {
-  width: 0px;
+  width: 0;
   height: 200px;
   border-radius: 20%;
   border: 2px, solid, #3fe2ff;

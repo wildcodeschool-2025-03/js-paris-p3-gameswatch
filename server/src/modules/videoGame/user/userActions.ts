@@ -36,7 +36,7 @@ const login: RequestHandler = async (req, res, next) => {
       res
         .status(422)
         .json(
-          "utilisateur non trouvée.",
+          "utilisateur non trouvé.",
         ); /*si ont trouve pas l'utilisateur en fonction de l'email ont renvoie une erreur*/
     else {
       const comfirmPassword = await argon.verify(

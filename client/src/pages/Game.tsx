@@ -16,8 +16,8 @@ function Game() {
         );
         if (response.status !== 200) console.error("game non trouvé");
         else {
-          const videoGame = await response.json();
-          setVideoGame(videoGame);
+          const videoGames = await response.json();
+          setVideoGame(videoGames);
         }
       }
     } catch (error) {
@@ -31,8 +31,8 @@ function Game() {
         const response = await fetch("http://localhost:3310/api/videoGames");
         if (response.status !== 200) console.error("offre non trouvée");
         else {
-          const VideoGame = await response.json();
-          setVideoGame(VideoGame);
+          const videoGames = await response.json();
+          setVideoGame(videoGames);
         }
       } catch (error) {
         console.error(error);
