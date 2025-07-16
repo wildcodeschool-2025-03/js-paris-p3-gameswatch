@@ -194,7 +194,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 760px) {
   .loginContainer {
     flex-direction: column;
     align-items: center;
@@ -217,11 +217,7 @@ body {
     width: 280px;
   }
 
-  .caseLogin {
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-  }
-
+  .caseLogin,
   .inputField,
   .passewordBtn,
   .loginBtn {
