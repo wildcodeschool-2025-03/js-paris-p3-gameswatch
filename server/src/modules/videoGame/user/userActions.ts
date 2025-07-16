@@ -58,4 +58,22 @@ const login: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { create, validate, login };
+const isAuth: RequestHandler = async (req, res, next) => {
+  try {
+    const authorization = req.headers.authorization;
+    if (!authorization) res.status(401).json("Authorization manquante.");
+    else {
+      const token = authorization.split(" ")[1];
+      if (!token) res.status(401).json("token manquant.");
+      else {
+        const validToken = jwt.verify(token, process.env.APP_SECRET as string);
+        req.body.user = validToken;
+        next();
+      }
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export default { create, validate, login, isAuth };

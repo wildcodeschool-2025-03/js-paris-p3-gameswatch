@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Sitting from "./pages/Sitting";
+import RedirectRoot from "./components/RedirectRoot";
 
 const Routes = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ const Routes = createBrowserRouter([
         path: "/Login",
       },
       {
-        element: <Profile />,
+        element: (
+          <RedirectRoot>
+            <Profile />
+          </RedirectRoot>
+        ),
         path: "/Profile",
       },
       {
