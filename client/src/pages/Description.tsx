@@ -1,7 +1,8 @@
 import "./Description.css";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Nav from "../components/Nav";
+import { useUser } from "../contexts/user.context";
 import background from "../img/backgroundHome.svg";
 import coeur from "../img/coeur.svg";
 import pouce from "../img/pouce.svg";
@@ -10,6 +11,24 @@ import type { VideoGame } from "../types/vite-env";
 function Description() {
   const [VideoGame, setVideoGame] = useState<VideoGame>();
   const { id } = useParams();
+  const { user } = useUser();
+  const navigate = useNavigate();
+
+  const handleWishList = () => {
+    if (user) {
+      // TODO: ajouter a la wishlist
+    } else {
+      navigate("/Login");
+    }
+  };
+
+  const handleLikeList = () => {
+    if (user) {
+      // TODO: ajouter a la wishlist
+    } else {
+      navigate("/Login");
+    }
+  };
 
   useEffect(() => {
     const loadVideoGame = async () => {
@@ -56,11 +75,19 @@ function Description() {
               <div className="platformBadge">Steam</div>
 
               <div className="actionButtons">
-                <button type="button" className="iconButton">
+                <button
+                  onClick={handleWishList}
+                  type="button"
+                  className="iconButton"
+                >
                   <img src={coeur} alt="coeur" className="iconImage" />
                   <span className="popup">Ajouter à la wishlist</span>
                 </button>
-                <button type="button" className="iconButton">
+                <button
+                  onClick={handleLikeList}
+                  type="button"
+                  className="iconButton"
+                >
                   <img src={pouce} alt="pouce" className="iconImage" />
                   <span className="popup">Ajouter aux favoris</span>
                 </button>

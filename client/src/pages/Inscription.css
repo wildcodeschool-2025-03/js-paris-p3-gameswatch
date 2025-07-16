@@ -6,6 +6,22 @@
   background-repeat: no-repeat;
 }
 
+.imgBodyInscription {
+  background-image: url("../img/InscriptionImg.svg");
+  background-size: 40%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 60vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  right: 1%;
+  bottom: 0;
+  transform: translateX(28.5%) translatey(-24%);
+}
+
 .inscriptionContainer {
   display: flex;
   flex-direction: column;
@@ -18,7 +34,7 @@
   margin-top: 3.5rem;
   border-radius: 7%;
   border: 2px, solid, #3fe2ff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(inscription-container-color);
   gap: 35px;
 }
 
@@ -43,7 +59,7 @@
   font-size: 1.2rem;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: rgba(1, 28, 38, 0.3);
+  background-color: var(inscription-input-color);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
   height: 20px;
@@ -63,14 +79,32 @@
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: rgba(63, 226, 255, 0.6);
+  background-color: var(inscription-color);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
   height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
+  font-family: "Krona One", sans-serif;
+}
+
+.comfirmBtn1 {
+  width: 400px;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: white;
+  background-color: var(inscription-comfirmBtn-color);
+  border: 2px solid #3fe2ff;
+  border-radius: 50px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
   font-family: "Krona One", sans-serif;
 }
 
@@ -78,8 +112,22 @@
   transform: scale(1.05);
 }
 
+.comfirmBtn1:hover {
+  transform: scale(1.05);
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  transform: translateY(135%);
+}
+
 .pageI {
   display: flex;
   align-items: center;
   gap: 70px;
+  position: relative;
+  z-index: 5;
 }

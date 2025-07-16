@@ -6,6 +6,11 @@
 
 :root {
   --blue-color: #3fe2ff;
+  --black-color: rgb(0, 0, 0);
+  --inscription-color: rgba(2, 28, 32, 0.955);
+  --inscription-input-color: rgba(1, 28, 38, 0.3);
+  --inscription-comfirmBtn-color: rgba(63, 226, 255, 0.6);
+  --inscription-container-color: rgba(0, 0, 0, 0.7);
 }
 
 #root {

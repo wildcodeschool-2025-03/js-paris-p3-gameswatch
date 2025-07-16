@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
+import RedirectRoot from "./components/RedirectRoot";
 import Description from "./pages/Description";
 import Game from "./pages/Game";
 import GamePc from "./pages/GamePC";
@@ -11,6 +12,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Sitting from "./pages/Sitting";
+
 const Routes = createBrowserRouter([
   {
     element: <App />,
@@ -32,7 +34,11 @@ const Routes = createBrowserRouter([
         path: "/Login",
       },
       {
-        element: <Profile />,
+        element: (
+          <RedirectRoot>
+            <Profile />
+          </RedirectRoot>
+        ),
         path: "/Profile",
       },
       {
