@@ -15,7 +15,7 @@ function Footer() {
             <img className="logoSite" src={logo} alt="logo" />
           </Link>
           <span className="brand">
-            <span className="blue">GAME</span>WATCH
+            <span className="blue">GAMES</span>WATCH
           </span>
         </div>
         <div className="footer-icons">
