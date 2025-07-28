@@ -64,7 +64,7 @@ function Login() {
           <div className="userLogin">
             <div className="remember-container">
               <input type="checkbox" />
-              <h3 className="remember">remember me</h3>
+              <h3 className="remember">remember me now</h3>
             </div>
             <Link to="/Inscription">
               <button id="createBtn" className="loginBtn" type="button">
