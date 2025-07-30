@@ -6,14 +6,15 @@
   background-repeat: no-repeat;
   background-repeat: no-repeat;
 }
-.imgBody {
-  background-image: url(imageHome.svg);
-  height: 80vh;
+.imgBodyContact {
+  background-image: url("../img/SCORPION.webp");
+  height: 100%;
   background-repeat: no-repeat;
+  background-size: 100%;
   position: absolute;
-  width: 60vw;
+  width: 50%;
   z-index: 0;
-  top: -15px;
+  top: 120px;
   right: 0;
 }
 
@@ -36,7 +37,7 @@
   width: 30vw;
   height: 48vh;
   border-radius: 20px;
-  background-color: rgba(34, 33, 33, 0.7);
+  background-color: rgba(54, 47, 47, 0.7);
   grid-column: span 3;
   border: solid 3px #05e2e5;
   transition: transform 0.3s ease;

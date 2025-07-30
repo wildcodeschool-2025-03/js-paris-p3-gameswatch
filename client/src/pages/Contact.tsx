@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
+import Nav from "../components/Nav";
 import Nepal from "./../img/NEPAL.webp";
 import Ldc from "./../img/PSG 2025.webp";
 import MarioBros from "./../img/SUPER_MARIO_BROS.webp";
@@ -28,7 +29,8 @@ function Contact() {
 
   return (
     <main className="contact-background">
-      <div className="imgBody"> </div>
+      <Nav />
+      <div className="imgBodyContact"> </div>
       <div className="contactUs">
         {/* Mes trois carrés */}
         <div className="Square">
