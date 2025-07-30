@@ -1,8 +1,8 @@
 import argon from "argon2";
 import type { RequestHandler } from "express";
 import jwt from "jsonwebtoken";
-import userRepository from "./userRepository";
 import videoGameRepository from "../videoGameRepository";
+import userRepository from "./userRepository";
 
 const create: RequestHandler = async (req, res, next) => {
   try {
