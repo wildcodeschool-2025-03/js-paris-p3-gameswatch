@@ -1,10 +1,14 @@
 nav {
-  position: relative;
-  z-index: 9;
+  position: absolute;
+  z-index: 10;
   padding-top: 30px;
   font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
 }
 
 ul {
@@ -27,7 +31,8 @@ ul {
   gap: 30px;
   display: flex;
   justify-content: flex-end;
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .logoSite {
@@ -102,4 +107,43 @@ ul {
   gap: 8px;
   list-style-type: none;
   text-decoration: none;
+}
+
+@media (max-width: 1120px) {
+  nav {
+    justify-content: center; /* centre horizontalement tout le nav */
+    flex-wrap: wrap; /* permet au contenu de passer à la ligne */
+    gap: 20px;
+  }
+
+  .IntroSite {
+    margin-left: 0; /* enlève la marge gauche */
+    flex: 1 1 100%; /* occupe toute la largeur en ligne séparée */
+    justify-content: center;
+  }
+
+  .MenuNav {
+    margin-left: 0; /* enlève la marge gauche */
+    gap: 20px;
+    flex-wrap: wrap; /* permet aux items de revenir à la ligne */
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+
+  .logoNav {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    flex: 1 1 100%; /* passe en ligne séparée, centré */
+    gap: 15px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Contact {
+    font-size: 20px; /* ajuste taille pour être moins envahissant */
+  }
 }

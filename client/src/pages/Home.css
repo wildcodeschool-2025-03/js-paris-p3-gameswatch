@@ -12,9 +12,10 @@
   background-repeat: no-repeat;
   position: absolute;
   width: 60vw;
-  z-index: 3;
+  z-index: 0;
   top: 0;
   right: 0;
+  position: fixed;
 }
 
 .buttonLogin {
@@ -45,13 +46,34 @@
 
 .TitreHome {
   display: flex;
-  margin-left: 24%;
-  margin-top: 14%;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin-top: 20%;
   font-family: "Krona One", sans-serif;
   font-size: 45px;
+  text-align: center;
+  padding: 0 1rem; /* Pour éviter que le texte touche les bords sur petits écrans */
 }
 
 .titreBtnLogin {
   position: relative;
   z-index: 4;
+}
+@media (max-width: 1120px) {
+  .TitreHome {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    padding: 0 10px;
+    line-height: 1.4;
+    margin-top: 20rem;
+  }
+
+  .buttonLogin {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    width: fit-content;
+    text-decoration: none;
+  }
 }

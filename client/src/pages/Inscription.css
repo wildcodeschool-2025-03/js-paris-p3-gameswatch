@@ -3,131 +3,121 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Pour commencer sous la navbar */
+  padding-top: 120px; /* Décale sous la nav */
+  box-sizing: border-box;
 }
 
 .imgBodyInscription {
-  background-image: url("../img/InscriptionImg.svg");
-  background-size: 40%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 60vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 3;
-  right: 1%;
-  bottom: 0;
-  transform: translateX(28.5%) translatey(-24%);
+  display: none;
 }
 
 .inscriptionContainer {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 55%;
-  margin-left: 14rem;
-  height: 70vh;
-  margin-bottom: 115px;
-  margin-top: 3.5rem;
-  border-radius: 7%;
-  border: 2px, solid, #3fe2ff;
-  background-color: var(inscription-container-color);
-  gap: 35px;
-}
-
-.articleI {
-  display: flex;
-  gap: 15px;
-  font-family: "Krona One", sans-serif;
-  margin-left: 40px;
-  align-items: center;
+  width: 600px;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  border: 2px solid #3fe2ff;
+  background-color: rgba(0, 0, 0, 0.75);
+  gap: 1.2rem;
+  box-sizing: border-box;
 }
 
 .titreInscription {
-  margin-top: 30px;
-  margin-left: 40px;
   font-family: "Krona One", sans-serif;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.articleI {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  width: 100%;
+  font-family: "Krona One", sans-serif;
+  color: white;
+}
+
+.articleI label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
 }
 
 .inputInscription {
-  width: 400px;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  font-family: "Inter", sans-serif;
-  color: white;
-  background-color: var(inscription-input-color);
-  border: 2px solid #3fe2ff;
-  border-radius: 50px;
-  height: 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.titreI {
-  font-size: 25px;
-}
-
-.comfirmBtn {
-  width: 230px;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: white;
-  background-color: var(inscription-color);
+  background-color: rgba(5, 93, 125, 0.3);
   border: 2px solid #3fe2ff;
   border-radius: 50px;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-family: "Krona One", sans-serif;
+  height: 42px;
+  box-sizing: border-box;
 }
 
-.comfirmBtn1 {
-  width: 400px;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: "Inter", sans-serif;
-  color: white;
-  background-color: var(inscription-comfirmBtn-color);
-  border: 2px solid #3fe2ff;
-  border-radius: 50px;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-family: "Krona One", sans-serif;
-}
-
-.comfirmBtn:hover {
-  transform: scale(1.05);
-}
-
-.comfirmBtn1:hover {
-  transform: scale(1.05);
+.inputInscription::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
 }
 
 .btnContainer {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  transform: translateY(135%);
+  justify-content: flex-start; /* ✅ Aligné à gauche */
+  gap: 20px;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.pageI {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  position: relative;
-  z-index: 5;
+.comfirmBtn,
+.comfirmBtn1 {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: white;
+  background-color: rgba(128, 217, 248, 0.3);
+  border: 2px solid #3fe2ff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.comfirmBtn:hover,
+.comfirmBtn1:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1120px) {
+  .inscriptionContainer {
+    width: 90vw;
+    padding: 2rem 1.5rem;
+    margin-top: 10rem;
+  }
+
+  .articleI {
+    grid-template-columns: 1fr;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

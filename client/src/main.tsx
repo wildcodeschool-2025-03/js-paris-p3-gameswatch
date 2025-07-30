@@ -5,6 +5,6 @@ import { UserProvider } from "./contexts/user.context";
 
 createRoot(document.getElementById("root") || document.body).render(
   <UserProvider>
-    <RouterProvider router={Routes} />,
+    <RouterProvider router={Routes} />
   </UserProvider>,
 );

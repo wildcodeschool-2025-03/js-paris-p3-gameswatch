@@ -88,3 +88,19 @@
 .imgGame:hover {
   transform: scale(1.2);
 }
+
+@media (max-width: 1120px) {
+  .gameSearch {
+    grid-template-columns: 1fr; /* 1 seule colonne */
+    justify-items: center; /* Centre les blocs */
+  }
+
+  .game-Container {
+    width: 90vw; /* Pour qu’ils ne dépassent pas */
+    max-width: 500px;
+  }
+
+  .searchBar-container {
+    margin-top: 11rem;
+  }
+}
