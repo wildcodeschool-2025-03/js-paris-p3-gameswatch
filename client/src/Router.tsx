@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
 import RedirectRoot from "./components/RedirectRoot";
+import Contact from "./pages/Contact";
 import Description from "./pages/Description";
 import Game from "./pages/Game";
 import GamePc from "./pages/GamePC";
@@ -64,6 +65,10 @@ const Routes = createBrowserRouter([
       {
         element: <GamePlay />,
         path: "/GamePlay",
+      },
+      {
+        element: <Contact />,
+        path: "/Contact",
       },
     ],
   },

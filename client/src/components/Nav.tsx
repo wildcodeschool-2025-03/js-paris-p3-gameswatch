@@ -43,7 +43,7 @@ const Nav = () => {
         <div className="MenuGame">
           <MenuBurger pagesLevel={Games} />
         </div>
-        <Link className="Contact" to="/">
+        <Link className="Contact" to="/Contact">
           contact us
         </Link>
       </div>
