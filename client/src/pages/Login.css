@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-repeat: no-repeat;
 }
 
 .imgBodyLogin {
@@ -24,17 +23,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  margin-left: 14rem;
-  height: 70vh;
-  margin-bottom: 115px;
-  margin-top: 3.5rem;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  padding: 3rem 2rem;
+  margin-left: 20vw;
+  margin-top: 10rem;
   border-radius: 7%;
-  border: 2px, solid, #3fe2ff;
+  border: 2px solid #3fe2ff;
   background-color: rgba(0, 0, 0, 0.7);
-  gap: 100px;
+  gap: 2rem;
   position: relative;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 .userLogin {
@@ -140,4 +141,64 @@
   width: 16px;
   height: 16px;
   accent-color: #50b7f5; /* couleur personnalisée (bleu clair) */
+}
+@media (max-width: 1120px) {
+  .caseLogin {
+    width: 90vw;
+    max-width: 450px;
+
+    /* Centrage horizontal propre */
+    margin: 8vh auto 0 auto;
+    margin-top: 18rem;
+
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .userBtn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .inputField {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  #createBtn,
+  #logBtn {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .loginBtn {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .remember-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .remember {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .imgBodyLogin {
+    display: none;
+  }
 }

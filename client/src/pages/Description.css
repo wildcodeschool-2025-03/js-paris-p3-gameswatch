@@ -218,16 +218,13 @@
 }
 
 /* Responsive pour petit écran */
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .contentWrapper {
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-width: 768px) {
-  .gameCardLeft,
-  .gameCardRight {
-    padding: 1rem 1.5rem;
+  .gameCardLeft {
+    margin-top: 12rem;
   }
 }
