@@ -1,0 +1,84 @@
+.contact-background {
+  position: relative;
+  background-image: url("../img/backgroundHome.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+}
+.imgBody {
+  background-image: url(imageHome.svg);
+  height: 80vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60vw;
+  z-index: 0;
+  top: -15px;
+  right: 0;
+}
+
+.contactUs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+.Square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 48vh;
+  border-radius: 20px;
+  background-color: rgba(34, 33, 33, 0.7);
+  grid-column: span 3;
+  border: solid 3px #05e2e5;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.SquareImage {
+  width: 18vw;
+  height: 30vh;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.Square:hover {
+  transform: translateY(-10px);
+}
+
+.ClassButton {
+  display: flex;
+  background-color: #1e91ea;
+  color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 40px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  border: solid 3px white;
+  justify-content: center;
+  font-family: "Krona One", sans-serif;
+}
+
+.lien {
+  padding-top: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
