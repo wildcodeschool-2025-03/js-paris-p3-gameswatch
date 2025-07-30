@@ -22,6 +22,11 @@ router.get("/api/videoGames/:id", videoGameActions.read);
 import userActions from "./modules/videoGame/user/userActions";
 
 router.post("/api/users", userActions.validate, userActions.create);
+router.get(
+  "/api/users/:id/library",
+  userActions.isAuth,
+  userActions.browseOffersFavorites,
+);
 router.post("/api/users/login", userActions.login);
 
 /* ************************************************************************* */

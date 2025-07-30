@@ -2,6 +2,7 @@ import argon from "argon2";
 import type { RequestHandler } from "express";
 import jwt from "jsonwebtoken";
 import userRepository from "./userRepository";
+import videoGameRepository from "../videoGameRepository";
 
 const create: RequestHandler = async (req, res, next) => {
   try {
@@ -76,4 +77,18 @@ const isAuth: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { create, validate, login, isAuth };
+const browseOffersFavorites: RequestHandler = async (req, res, next) => {
+  try {
+    const idUser = Number(req.params.id);
+    if (idUser !== req.body.user.id) {
+      res.sendStatus(401);
+    } else {
+      const video_game = await videoGameRepository.readAllByUserId(idUser);
+      res.json(video_game);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export default { create, validate, login, isAuth, browseOffersFavorites };

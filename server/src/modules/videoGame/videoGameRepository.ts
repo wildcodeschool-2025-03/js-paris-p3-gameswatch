@@ -49,6 +49,15 @@ class videoGameRepository {
     const [rows] = await databaseClient.query<Rows>("select * from video_game");
     return rows as VideoGame[];
   }
+
+  async readAllByUserId(idUser: number) {
+    const [rows] = await databaseClient.query<Rows>(
+      "SELECT video_game.* from video_game JOIN library ON library.video_game_id = video_game.id WHERE library.user_id = ?",
+      [idUser],
+    );
+
+    return rows as VideoGame[];
+  }
 }
 
 export default new videoGameRepository();
